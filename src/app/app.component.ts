@@ -1,9 +1,9 @@
-import {ChangeDetectionStrategy, Component, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnDestroy, OnInit} from '@angular/core';
 import {PizzaService} from "./services/pizza.service";
 import {PizzaInterface} from "./services/interface/pizza.interface";
 
 import {animate, state, style, transition, trigger} from "@angular/animations";
-import {time} from "./utils/utils";
+
 import {FormControl, FormGroup} from "@angular/forms";
 import { DatePipe} from "@angular/common";
 import {Subject, takeUntil} from "rxjs";
@@ -14,11 +14,9 @@ import {Subject, takeUntil} from "rxjs";
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-
-
   animations: [
     trigger('drop', [
-      state('opened', style({ marginTop: 0, height: '150px', visibility: 'visible'}),),
+      state('opened', style({ marginTop: 0, height: '170px', visibility: 'visible'}),),
       state('closed', style({  visibility: 'hidden', height: 0,})),
       transition('closed<=>opened', animate(250))
     ])
@@ -26,13 +24,9 @@ import {Subject, takeUntil} from "rxjs";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, OnDestroy{
-
-
   private unsubscribe$: Subject<void> = new Subject<void>();
   title: string = 'bot-front';
   pizzas!: PizzaInterface[]
-
-
   search!: string
   filterType: string = 'date';
   setFilterType() {

@@ -67,7 +67,8 @@
 
             <owl-date-time
                            [pickerType]="'timer'"
-                           #dateSingle></owl-date-time>
+                           #dateSingle
+            [showSecondsTimer]="true"></owl-date-time>
             <button color="primary" mat-raised-button mat-ripple (click)="form.reset()">reset</button>
 
             <br/>
@@ -104,28 +105,28 @@
         <span (click)="openCloseMeat()">4 мяса</span><em>{{meatPizzas?.length}}</em><mat-icon>{{meatAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
           <li [@drop]="meatAnimationTrigger" *ngFor="let pizza of meatPizzas">
-            <p>id: {{pizza.id}}</p><br>
+            <br><p>id: {{pizza.id}}</p><br>
             <p>название пиццы {{pizza.name}}</p><br>
             <p>время заказа {{pizza.orderTime}}</p><br>
             <p>дата заказа {{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openCloseCheese()">4 сыра</span><em>{{cheesePizzas?.length}}</em><mat-icon>{{cheeseAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li *ngFor="let pizza of cheesePizzas"> <p>id: {{pizza.id}}</p><br>
+          <li *ngFor="let pizza of cheesePizzas"> <br><p>id: {{pizza.id}}</p><br>
             <p>название пиццы {{pizza.name}}</p><br>
             <p>время заказа {{pizza.orderTime}}</p><br>
             <p>дата заказа {{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openClosePrima()">примавера</span><em>{{primaveraPizzas?.length}}</em><mat-icon>{{cheeseAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li [@drop]="primaAnimationTrigger" *ngFor="let pizza of primaveraPizzas"> <p>id: {{pizza.id}}</p><br>
+          <li [@drop]="primaAnimationTrigger" *ngFor="let pizza of primaveraPizzas"> <br><p>id: {{pizza.id}}</p><br>
             <p>название пиццы {{pizza.name}}</p><br>
             <p>время заказа {{pizza.orderTime}}</p><br>
             <p>дата заказа {{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openCloseSeasons()">4 сезона</span><em>{{seasonsPizzas?.length}}</em><mat-icon>{{seasonsAnimationTrigger === 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li  [@drop]="seasonsAnimationTrigger" *ngFor="let pizza of seasonsPizzas"> <p>id: {{pizza.id}}</p><br>
+          <li  [@drop]="seasonsAnimationTrigger" *ngFor="let pizza of seasonsPizzas"> <br><p>id: {{pizza.id}}</p><br>
             <p>название пиццы {{pizza.name}}</p><br>
             <p>время заказа {{pizza.orderTime}}</p><br>
             <p>дата заказа {{pizza.orderDate}}</p></li>
@@ -150,56 +151,61 @@
         </ul>
         <span (click)="openCloseTirolian()">тирольская</span><em>{{tirolianPizzas?.length}}</em><mat-icon>{{tirolianAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li [@drop]="tirolianAnimationTrigger" *ngFor="let pizza of tirolianPizzas"><p>название пиццы {{pizza.name}}</p><br>
+          <li [@drop]="tirolianAnimationTrigger" *ngFor="let pizza of tirolianPizzas">
+            <br><p>id: {{pizza.id}}</p><br>
             <p>время заказа {{pizza.orderTime}}</p><br>
             <p>дата заказа {{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openCloseMidSea()">средиземноморская</span><em>{{midSeaPizzas?.length}}</em><mat-icon>{{midSeaAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li [@drop]="midSeaAnimationTrigger" *ngFor="let pizza of midSeaPizzas"><p>название пиццы {{pizza.name}}</p><br>
+          <li [@drop]="midSeaAnimationTrigger" *ngFor="let pizza of midSeaPizzas">
+            <br><p>id: {{pizza.id}}</p><br>
             <p>время заказа {{pizza.orderTime}}</p><br>
             <p>дата заказа {{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openCloseCaprese()">капрезе</span><em>{{capresePizzas?.length}}</em><mat-icon>{{capreseAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li [@drop]="capreseAnimationTrigger" *ngFor="let pizza of capresePizzas"><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
+          <li [@drop]="capreseAnimationTrigger" *ngFor="let pizza of capresePizzas">
+            <br><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openCloseMimosa()">мимоза</span><em>{{mimosaPizzas?.length}}</em><mat-icon>{{mimosaAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li [@drop]="mimosaAnimationTrigger" *ngFor="let pizza of mimosaPizzas"><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
+          <li [@drop]="mimosaAnimationTrigger" *ngFor="let pizza of mimosaPizzas"><br><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
         </ul><span (click)="openCloseMarinara()">маринара</span><em>{{marinaraPizzas?.length}}</em><mat-icon>{{marinaraAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li [@drop]="marinaraAnimationTrigger" *ngFor="let pizza of marinaraPizzas"><p>название пиццы {{pizza.name}}</p><br>
+          <li [@drop]="marinaraAnimationTrigger" *ngFor="let pizza of marinaraPizzas"><br><p>id: {{pizza.id}}</p><br>
             <p>время заказа {{pizza.orderTime}}</p><br>
             <p>дата заказа {{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openCloseCalifornian()">калифорнийская</span><em>{{californianPizzas?.length}}</em><mat-icon>{{californianAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li [@drop]="californianAnimationTrigger" *ngFor="let pizza of californianPizzas"><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
+          <li [@drop]="californianAnimationTrigger" *ngFor="let pizza of californianPizzas">
+            <br><p>id: {{pizza.id}}</p><br>
+            <p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openCloseYork()">нью-йоркская</span><em>{{newYorkishPizzas?.length}}</em><mat-icon>{{yorkAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li [@drop]="yorkAnimationTrigger" *ngFor="let pizza of newYorkishPizzas"><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
+          <li [@drop]="yorkAnimationTrigger" *ngFor="let pizza of newYorkishPizzas"><br><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openCloseCozze()">Кон ле коцце</span><em>{{conLeKoccePizzas?.length}}</em><mat-icon>{{ cozzeAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li [@drop]="cozzeAnimationTrigger" *ngFor="let pizza of conLeKoccePizzas"><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
+          <li [@drop]="cozzeAnimationTrigger" *ngFor="let pizza of conLeKoccePizzas"><br><p>id: {{pizza.id}}</p><br><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openClosePapaya()">папайя</span><em>{{papayaPizzas?.length}}</em><mat-icon>{{papayaAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li [@drop]="papayaAnimationTrigger"  *ngFor="let pizza of papayaPizzas"><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
+          <li [@drop]="papayaAnimationTrigger"  *ngFor="let pizza of papayaPizzas"><br><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openCloseVeg()">вегетарианская</span><em>{{vegetarianPizzas?.length}}</em><mat-icon>{{vegSeaAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul >
-          <li [@drop]="vegSeaAnimationTrigger" *ngFor="let pizza of vegetarianPizzas"><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
+          <li [@drop]="vegSeaAnimationTrigger" *ngFor="let pizza of vegetarianPizzas"><br><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openCloseDiablo()">Diablo</span><em>{{diabloPizzas?.length}}</em><mat-icon>{{vegSeaAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul >
-          <li [@drop]="diabloAnimationTrigger" *ngFor="let pizza of diabloPizzas"><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
+          <li [@drop]="diabloAnimationTrigger" *ngFor="let pizza of diabloPizzas"><br><p>id: {{pizza.id}}</p><br><p>{{pizza.name}}</p><br><p>{{pizza.orderTime}}</p><br><p>{{pizza.orderDate}}</p></li>
         </ul>
         <span (click)="openCloseOwnPizzas()">другое</span><em>{{ownPizzas?.length}}</em><mat-icon>{{ownPizzasAnimationTrigger == 'opened'? 'expand_more' : 'chevron_right'}}</mat-icon>
         <ul>
-          <li [@drop]="ownPizzasAnimationTrigger" *ngFor="let pizza of ownPizzas"><p>название пиццы {{pizza.name}}</p><br>
+          <li [@drop]="ownPizzasAnimationTrigger" *ngFor="let pizza of ownPizzas"><br><p>id: {{pizza.id}}</p><br>
             <p>время заказа {{pizza.orderTime}}</p><br>
             <p>дата заказа {{pizza.orderDate}}</p></li>
         </ul>
@@ -213,6 +219,7 @@
     <li *ngFor="let pizza of pizzas | findByAddress: address
     | filterByName: search | filterByDate: dateField
     | filterByTime: timeField ">
+      <br>
       <p>id: {{pizza.id}}</p><br>
       <br>
       <p>название {{pizza.name}}</p>

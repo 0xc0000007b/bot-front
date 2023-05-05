@@ -1,5 +1,5 @@
 # BotFront - very simple analytics front end for pizza bot
-
+This is deadly simple web page  
 
 
 
@@ -14,8 +14,14 @@ $ cd bot-front
 #and down enter to open command line on windows
 $ webstorm .
 #to open thats project in webstorm 
+# and run 
+$ npm install
+# or 
+$ yarn install
+# for install all packages which need in those projects
+# and  finally run those command to run webpack 
 $ ng serve
-#run those command to run webpack 
+ 
 #dev server on 
 ```
 
@@ -34,3 +40,15 @@ developement serve will be running on
 ## Libraries which i will use
 1. Angular material - official open source Angular components library
 2. angular-datetime-picker - custom time picker component for app
+
+
+# Overview
+<details>
+  <summary>screens</summary>
+  <img src="src/assets/images/img.png">
+  <img src="src/assets/images/img_1.png">
+  <img src="src/assets/images/img_2.png">
+  <img src="src/assets/images/img_3.png">
+  <img src="src/assets/images/img_4.png">
+  <img src="src/assets/images/img_5.png">
+</details>
