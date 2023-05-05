@@ -1,27 +1,36 @@
-# BotFront
+# BotFront - very simple analytics front end for pizza bot
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+```bash
+# clone this project to your machine
+$ git clone https://github.com/0xc0000007b/bot-front
+# change directory tobot-front
+$ cd bot-front
+#open that project in core editor tool
+#i will using the webstorm
+#pick  win + r keys and write cmd, 
+#and down enter to open command line on windows
+$ webstorm .
+#to open thats project in webstorm 
+$ ng serve
+#run those command to run webpack 
+#dev server on 
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+developement serve will be running on
+````http://localhost:4200````
+# Functions
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. simple sorting by name of pizza
+2. simple sorting by date of order
+3. simple sorting by time of order
+4. sorting by address of order
+5. sorting by count of one type pizzas
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Libraries which i will use
+1. Angular material - official open source Angular components library
+2. angular-datetime-picker - custom time picker component for app
